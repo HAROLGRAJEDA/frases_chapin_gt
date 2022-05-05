@@ -12,30 +12,55 @@
         width: 100%;
         height: 60ch;
     }
-   
-    .btn-wsp{
-        position:fixed;
-        width:60px;
-        height:60px;
-        line-height: 63px;
-        bottom:25px;
-        right:25px;
-        background:#25d366;
-        color:#FFF;
-        border-radius:50px;
-        text-align:center;
-        font-size:35px;
-        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-        z-index:100;
-        transition: all 300ms ease;
+    
+  
+
+    *{  
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    .btn-wsp:hover{
-        background: #20ba5a;
+    #btn-mas{
+        display: none;
     }
-    @media only screen and (min-width:320px) and (max-width:768px){
-        .btn-wsp{
-            width:63px;
-            height:63px;
-            line-height: 66px;
-        }
+    .container{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    .redes a, .btn-mas label{
+        display: block;
+        text-decoration: none;
+        background: #cc2b2b;
+        color: #fff;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+        transition: all 500ms ease;
+    }
+    .redes a:hover{
+        background: #fff;
+        color: #cc2b2b;
+    }
+    .redes a{
+        margin-bottom: -15px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #btn-mas:checked~ .redes a{
+        margin-bottom: 10px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .btn-mas label{
+        cursor: pointer;
+        background: #f44141;
+        font-size: 23px;
+    }
+    #btn-mas:checked ~ .btn-mas label{
+        transform: rotate(135deg);
+        font-size: 25px;
     }
